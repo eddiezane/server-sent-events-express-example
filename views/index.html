@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+  <script>
+    var source = new EventSource('/updates');
+
+    source.onmessage = function(e) {
+      document.body.innerHTML += e.data + '<br>';
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
